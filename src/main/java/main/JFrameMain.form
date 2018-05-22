@@ -659,7 +659,7 @@
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="jScrollPane1" min="-2" pref="72" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
@@ -1240,9 +1240,12 @@
                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="jButton3" min="-2" pref="200" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" min="-2" pref="1027" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jScrollPane2" min="-2" pref="1027" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="583" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="21" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -1483,13 +1486,13 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Component id="jComboBox2" pref="234" max="32767" attributes="0"/>
-                                                  <Component id="jComboBox4" pref="234" max="32767" attributes="0"/>
                                                   <Component id="jComboBox14" pref="234" max="32767" attributes="0"/>
                                                   <Component id="jComboBox13" pref="234" max="32767" attributes="0"/>
                                                   <Component id="jComboBox15" pref="234" max="32767" attributes="0"/>
                                                   <Component id="jComboBox16" pref="234" max="32767" attributes="0"/>
                                                   <Component id="jComboBox24" pref="234" max="32767" attributes="0"/>
                                                   <Component id="jButton9" max="32767" attributes="0"/>
+                                                  <Component id="jComboBox4" alignment="0" pref="234" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -1615,6 +1618,9 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value="ZAPISZ ZMIANY"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+                      </Events>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel5">
                       <Properties>
@@ -1671,21 +1677,6 @@
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JComboBox" name="jComboBox2">
-                      <Properties>
-                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                          <StringArray count="4">
-                            <StringItem index="0" value="Item 1"/>
-                            <StringItem index="1" value="Item 2"/>
-                            <StringItem index="2" value="Item 3"/>
-                            <StringItem index="3" value="Item 4"/>
-                          </StringArray>
-                        </Property>
-                      </Properties>
-                      <AuxValues>
-                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                      </AuxValues>
-                    </Component>
-                    <Component class="javax.swing.JComboBox" name="jComboBox4">
                       <Properties>
                         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                           <StringArray count="4">
@@ -1870,20 +1861,23 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                       <SubComponents>
-                        <Component class="javax.swing.JTable" name="jTable3">
+                        <Component class="javax.swing.JTable" name="tabTeamMembers">
                           <Properties>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor" postCode="}&#xa;} catch(SQLException ex)&#xa;{ex.printStackTrace();}">
-                              <Connection code="model);&#xa;&#xa;try{&#xa;    for(TeamMember m : dbc.selectTeamMember()){&#xa;        model.addRow(&#xa;            new Object[]{&#xa;                m.getName(), m.getEmail()&#xa;            }&#xa;&#xa;            " type="code"/>
+                              <Connection code="model);&#xa;&#xa;try{&#xa;    for(TeamMember m : dbc.selectTeamMember()){&#xa;        model.addRow(&#xa;            new Object[]{&#xa;                m. getId(), m.getName(), m.getEmail()&#xa;            }&#xa;&#xa;            " type="code"/>
                             </Property>
                             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                               <TableColumnModel selectionModel="0"/>
+                            </Property>
+                            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+                              <Dimension value="[450, 240]"/>
                             </Property>
                             <Property name="tableHeader" type="javax.swing.table.JTableHeader" editor="org.netbeans.modules.form.editors2.JTableHeaderEditor">
                               <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                             </Property>
                           </Properties>
                           <AuxValues>
-                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="javax.swing.table.DefaultTableModel model = &#xa;new javax.swing.table.DefaultTableModel(&#xa;&#xa;new String[] {&quot;Imi&#x119; i nazwisko / Nazwa&quot;, &quot;Email&quot;&#xa;}, 0&#xa;);"/>
+                            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="javax.swing.table.DefaultTableModel model = &#xa;new javax.swing.table.DefaultTableModel(&#xa;&#xa;new String[] {&quot;Id&quot;, &quot;Imi&#x119; i nazwisko / Nazwa&quot;, &quot;Email&quot;&#xa;}, 0&#xa;);"/>
                           </AuxValues>
                         </Component>
                       </SubComponents>
@@ -1957,6 +1951,21 @@
                       <Properties>
                         <Property name="text" type="java.lang.String" value=" "/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JComboBox" name="jComboBox4">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                          <StringArray count="4">
+                            <StringItem index="0" value="Item 1"/>
+                            <StringItem index="1" value="Item 2"/>
+                            <StringItem index="2" value="Item 3"/>
+                            <StringItem index="3" value="Item 4"/>
+                          </StringArray>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
                     </Component>
                   </SubComponents>
                 </Container>

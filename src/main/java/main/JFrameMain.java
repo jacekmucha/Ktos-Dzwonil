@@ -31,6 +31,7 @@ import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JLabel;
 
 /**
  *
@@ -176,7 +177,6 @@ public class JFrameMain extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabel35 = new javax.swing.JLabel();
         jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox4 = new javax.swing.JComboBox<>();
         jComboBox13 = new javax.swing.JComboBox<>();
         jComboBox14 = new javax.swing.JComboBox<>();
         jComboBox15 = new javax.swing.JComboBox<>();
@@ -190,13 +190,14 @@ public class JFrameMain extends javax.swing.JFrame {
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tabTeamMembers = new javax.swing.JTable();
         jComboBox23 = new javax.swing.JComboBox<>();
         jComboBox24 = new javax.swing.JComboBox<>();
         jComboBox25 = new javax.swing.JComboBox<>();
         jComboBox26 = new javax.swing.JComboBox<>();
         jButton9 = new javax.swing.JButton();
         newMemberStatusInfo = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
         panelProducts = new javax.swing.JPanel();
         panelDataBase = new javax.swing.JPanel();
         panelLicense = new javax.swing.JPanel();
@@ -954,7 +955,7 @@ public class JFrameMain extends javax.swing.JFrame {
                             .addComponent(bProducts32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel16)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelNewCallLayout.createSequentialGroup()
                         .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1020,8 +1021,10 @@ public class JFrameMain extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(panelHistoryTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1027, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                    .addGroup(panelHistoryTodayLayout.createSequentialGroup()
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1027, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(583, 583, 583)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelHistoryTodayLayout.setVerticalGroup(
             panelHistoryTodayLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1100,6 +1103,11 @@ public class JFrameMain extends javax.swing.JFrame {
         jTabbedPane1.addTab("Tryby pracy", panelWorkMode);
 
         jButton1.setText("ZAPISZ ZMIANY");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel5.setText("Dodaj nowy kontakt:");
@@ -1135,8 +1143,6 @@ public class JFrameMain extends javax.swing.JFrame {
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -1169,23 +1175,24 @@ public class JFrameMain extends javax.swing.JFrame {
         javax.swing.table.DefaultTableModel model =
         new javax.swing.table.DefaultTableModel(
 
-            new String[] {"Imię i nazwisko / Nazwa", "Email"
+            new String[] {"Id", "Imię i nazwisko / Nazwa", "Email"
             }, 0
         );
-        jTable3.setModel(model);
+        tabTeamMembers.setModel(model);
 
         try{
             for(TeamMember m : dbc.selectTeamMember()){
                 model.addRow(
                     new Object[]{
-                        m.getName(), m.getEmail()
+                        m. getId(), m.getName(), m.getEmail()
                     }
 
                 );
             }
         } catch(SQLException ex)
         {ex.printStackTrace();}
-        jScrollPane4.setViewportView(jTable3);
+        tabTeamMembers.setPreferredSize(new java.awt.Dimension(450, 240));
+        jScrollPane4.setViewportView(tabTeamMembers);
 
         jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -1198,6 +1205,8 @@ public class JFrameMain extends javax.swing.JFrame {
         jButton9.setText("ODŚWIEŻ KOLEJNOŚĆ");
 
         newMemberStatusInfo.setText(" ");
+
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout panelMyTeamLayout = new javax.swing.GroupLayout(panelMyTeam);
         panelMyTeam.setLayout(panelMyTeamLayout);
@@ -1239,13 +1248,13 @@ public class JFrameMain extends javax.swing.JFrame {
                             .addGroup(panelMyTeamLayout.createSequentialGroup()
                                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jComboBox2, 0, 234, Short.MAX_VALUE)
-                                    .addComponent(jComboBox4, 0, 234, Short.MAX_VALUE)
                                     .addComponent(jComboBox14, 0, 234, Short.MAX_VALUE)
                                     .addComponent(jComboBox13, 0, 234, Short.MAX_VALUE)
                                     .addComponent(jComboBox15, 0, 234, Short.MAX_VALUE)
                                     .addComponent(jComboBox16, 0, 234, Short.MAX_VALUE)
                                     .addComponent(jComboBox24, 0, 234, Short.MAX_VALUE)
-                                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jComboBox4, 0, 234, Short.MAX_VALUE))
                                 .addGap(28, 28, 28)
                                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1718,19 +1727,19 @@ public class JFrameMain extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
 
-        jTable3 = new javax.swing.JTable();
+        tabTeamMembers = new javax.swing.JTable();
         javax.swing.table.DefaultTableModel model
                 = new javax.swing.table.DefaultTableModel(
-                        new String[]{"Imię i nazwisko / Nazwa", "Email"
+                        new String[]{"Id", "Imię i nazwisko / Nazwa", "Email"
                         }, 0
                 );
-        jTable3.setModel(model);
+        tabTeamMembers.setModel(model);
 
         try {
             for (TeamMember m : dbc.selectTeamMember()) {
                 model.addRow(
                         new Object[]{
-                            m.getName(), m.getEmail()
+                            m.getId(), m.getName(), m.getEmail()
                         }
                 );
             }
@@ -1738,10 +1747,46 @@ public class JFrameMain extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        jScrollPane4.setViewportView(jTable3);
+        jScrollPane4.setViewportView(tabTeamMembers);
 
 
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+
+        /*
+        int zaznaczonyWiersz = tabelaListaGosci.getSelectedRow();
+        int updateId = (int)tabelaListaGosci.getModel().getValueAt(zaznaczonyWiersz, 0);
+        String updateImie = (String)tabelaListaGosci.getModel().getValueAt(zaznaczonyWiersz, 1);
+        String updateNazwisko = (String)tabelaListaGosci.getModel().getValueAt(zaznaczonyWiersz, 2);
+        String updatePesel = (String)tabelaListaGosci.getModel().getValueAt(zaznaczonyWiersz, 3);
+        String updateNrTelefonu = (String)tabelaListaGosci.getModel().getValueAt(zaznaczonyWiersz, 4);
+        String updateEmail = (String)tabelaListaGosci.getModel().getValueAt(zaznaczonyWiersz, 5);
+
+
+        Gosc zmienionyGosc = new Gosc();
+        zmienionyGosc.setId(updateId);
+        zmienionyGosc.setImie(updateImie);
+        zmienionyGosc.setNazwisko(updateNazwisko);
+        zmienionyGosc.setPesel(updatePesel);
+        zmienionyGosc.setNrTelefonu(updateNrTelefonu);
+        zmienionyGosc.setEmail(updateEmail);
+
+        dbc.updateGosc(zmienionyGosc);
+         */
+        int selectedRow = tabTeamMembers.getSelectedRow();
+        int updateId = (int) tabTeamMembers.getModel().getValueAt(selectedRow, 0);
+        String updateName = (String) tabTeamMembers.getModel().getValueAt(selectedRow, 1);
+        String updateEmail = (String) tabTeamMembers.getModel().getValueAt(selectedRow, 2);
+
+        TeamMember updateTeamMember = new TeamMember();
+        updateTeamMember.setId(updateId);
+        updateTeamMember.setName(updateName);
+        updateTeamMember.setEmail(updateEmail);
+
+        dbc.updateTeamMember(updateTeamMember);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     public JButton getjButtonNewConversation() {
         return jButtonNewConversation;
@@ -1784,6 +1829,8 @@ public class JFrameMain extends javax.swing.JFrame {
 
     }
 
+
+    
     DBConnection dbc = new DBConnection();
 
     //////////////// Data i czas
@@ -1918,7 +1965,6 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPaneMain;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JTextArea jTestAreaDetails;
     private javax.swing.JTextField jTextFieldCompany;
     private javax.swing.JTextField jTextFieldCustomer;
@@ -1940,6 +1986,7 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JPanel panelSettings;
     private javax.swing.JPanel panelWaitingMode;
     private javax.swing.JPanel panelWorkMode;
+    private javax.swing.JTable tabTeamMembers;
     private javax.swing.JTextField textNewTeamMemberEmail;
     private javax.swing.JTextField textNewTeamMemberName;
     // End of variables declaration//GEN-END:variables
