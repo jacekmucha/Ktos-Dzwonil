@@ -27,6 +27,7 @@ import javax.swing.JToggleButton;
 import call.MyNewMessage;
 import dbModel.DBConnection;
 import dbModel.TeamMember;
+import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -45,7 +46,6 @@ public class JFrameMain extends javax.swing.JFrame {
 
         panelCallStats.setVisible(false);
     }
-    DBConnection dbc = new DBConnection();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -130,24 +130,28 @@ public class JFrameMain extends javax.swing.JFrame {
         jrbStatusContinue = new javax.swing.JRadioButton();
         bMailAddress4 = new javax.swing.JToggleButton();
         bMailAddress2 = new javax.swing.JToggleButton();
-        bMailAddress5 = new javax.swing.JToggleButton();
         bMailAddress7 = new javax.swing.JToggleButton();
         bMailAddress8 = new javax.swing.JToggleButton();
-        bMailAddress12 = new javax.swing.JToggleButton();
         bSEND = new javax.swing.JButton();
-        jSeparator1 = new javax.swing.JSeparator();
         jrbStatusNewCase = new javax.swing.JRadioButton();
         bMailAddress10 = new javax.swing.JToggleButton();
-        bMailAddress11 = new javax.swing.JToggleButton();
         bMailAddress9 = new javax.swing.JToggleButton();
         bProducts19 = new javax.swing.JToggleButton();
         bProducts4 = new javax.swing.JToggleButton();
-        bMailAddress6 = new javax.swing.JToggleButton();
         bProducts15 = new javax.swing.JToggleButton();
         bProducts16 = new javax.swing.JToggleButton();
         bProducts17 = new javax.swing.JToggleButton();
         bProducts18 = new javax.swing.JToggleButton();
         bProducts5 = new javax.swing.JToggleButton();
+        bMailAddress17 = new javax.swing.JToggleButton();
+        bMailAddress18 = new javax.swing.JToggleButton();
+        bMailAddress19 = new javax.swing.JToggleButton();
+        bMailAddress20 = new javax.swing.JToggleButton();
+        bMailAddress21 = new javax.swing.JToggleButton();
+        bMailAddress22 = new javax.swing.JToggleButton();
+        bMailAddress23 = new javax.swing.JToggleButton();
+        bMailAddress24 = new javax.swing.JToggleButton();
+        jSeparator3 = new javax.swing.JSeparator();
         panelHistoryToday = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -161,8 +165,6 @@ public class JFrameMain extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         panelWorkMode = new javax.swing.JPanel();
         panelMyTeam = new javax.swing.JPanel();
-        jScrollPane4 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
@@ -187,6 +189,14 @@ public class JFrameMain extends javax.swing.JFrame {
         jComboBox22 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jComboBox23 = new javax.swing.JComboBox<>();
+        jComboBox24 = new javax.swing.JComboBox<>();
+        jComboBox25 = new javax.swing.JComboBox<>();
+        jComboBox26 = new javax.swing.JComboBox<>();
+        jButton9 = new javax.swing.JButton();
+        newMemberStatusInfo = new javax.swing.JLabel();
         panelProducts = new javax.swing.JPanel();
         panelDataBase = new javax.swing.JPanel();
         panelLicense = new javax.swing.JPanel();
@@ -604,33 +614,24 @@ public class JFrameMain extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         jLabel17.setText("Wyślij powiadomienie do:");
 
-        bMailAddress1.setText("Michał Polański");
+        bMailAddress1.setText(" ");
         bMailAddress1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bMailAddress1ActionPerformed(evt);
             }
         });
 
-        bMailAddress3.setText("Bartosz Smaczny");
+        bMailAddress3.setText(" ");
 
         jrbStatusContinue.setText("Kontynuacja");
 
-        bMailAddress4.setText("Michał Zygmunt");
+        bMailAddress4.setText(" ");
 
-        bMailAddress2.setText("Artur Krzyworzeka");
+        bMailAddress2.setText(" ");
 
-        bMailAddress5.setText("Jacek Mucha");
+        bMailAddress7.setText(" ");
 
-        bMailAddress7.setText("ZAMÓWIENIA");
-
-        bMailAddress8.setText("WSPARCIE");
-
-        bMailAddress12.setText("PREZES");
-        bMailAddress12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bMailAddress12ActionPerformed(evt);
-            }
-        });
+        bMailAddress8.setText(" ");
 
         bSEND.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
         bSEND.setText("ZAPISZ I WYŚLIJ EMAIL");
@@ -642,11 +643,9 @@ public class JFrameMain extends javax.swing.JFrame {
 
         jrbStatusNewCase.setText("Nowa sprawa");
 
-        bMailAddress10.setText("Ola Oczkowska");
+        bMailAddress10.setText(" ");
 
-        bMailAddress11.setText("Urszula Szot");
-
-        bMailAddress9.setText("SERWIS");
+        bMailAddress9.setText(" ");
 
         bProducts19.setText("PH");
         bProducts19.addActionListener(new java.awt.event.ActionListener() {
@@ -661,8 +660,6 @@ public class JFrameMain extends javax.swing.JFrame {
                 bProducts4ActionPerformed(evt);
             }
         });
-
-        bMailAddress6.setText("Piotr Królikowski");
 
         bProducts15.setText("T41");
         bProducts15.addActionListener(new java.awt.event.ActionListener() {
@@ -699,145 +696,181 @@ public class JFrameMain extends javax.swing.JFrame {
             }
         });
 
+        bMailAddress17.setText(" ");
+        bMailAddress17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bMailAddress17ActionPerformed(evt);
+            }
+        });
+
+        bMailAddress18.setText(" ");
+
+        bMailAddress19.setText(" ");
+
+        bMailAddress20.setText(" ");
+
+        bMailAddress21.setText(" ");
+
+        bMailAddress22.setText(" ");
+
+        bMailAddress23.setText(" ");
+
+        bMailAddress24.setText(" ");
+
         javax.swing.GroupLayout panelNewCallLayout = new javax.swing.GroupLayout(panelNewCall);
         panelNewCall.setLayout(panelNewCallLayout);
         panelNewCallLayout.setHorizontalGroup(
             panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelNewCallLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNewCallLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelNewCallLayout.createSequentialGroup()
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNewCallLayout.createSequentialGroup()
-                                .addComponent(jLabel16)
-                                .addGap(572, 572, 572))
-                            .addGroup(panelNewCallLayout.createSequentialGroup()
-                                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane1)
-                                    .addGroup(panelNewCallLayout.createSequentialGroup()
-                                        .addComponent(jLabel15)
-                                        .addGap(62, 62, 62)
-                                        .addComponent(bProducts28, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bProducts29)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bProducts30)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bProducts31)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(bProducts32, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel11)
-                                    .addGroup(panelNewCallLayout.createSequentialGroup()
-                                        .addComponent(jLabel12)
-                                        .addGap(66, 66, 66)
-                                        .addComponent(bProducts1))
-                                    .addGroup(panelNewCallLayout.createSequentialGroup()
-                                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel13)
-                                            .addComponent(jLabel14))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(panelNewCallLayout.createSequentialGroup()
-                                                .addComponent(bProducts9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts10)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts11)
-                                                .addGap(3, 3, 3)
-                                                .addComponent(bProducts12, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts13, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts14)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts15)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts16)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts17)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts18))
-                                            .addGroup(panelNewCallLayout.createSequentialGroup()
-                                                .addComponent(bProducts19)
-                                                .addGap(1, 1, 1)
-                                                .addComponent(bProducts20)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts21)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts22)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts23, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts24)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts25)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts26)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts27, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(panelNewCallLayout.createSequentialGroup()
-                                                .addGap(67, 67, 67)
-                                                .addComponent(bProducts2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                .addComponent(bProducts7, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addComponent(bProducts8)))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(panelNewCallLayout.createSequentialGroup()
-                                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(bMailAddress1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress6, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(bMailAddress8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(bMailAddress11, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(bSEND, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel17)))
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator3)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelNewCallLayout.createSequentialGroup()
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldPhone, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 190, Short.MAX_VALUE)
-                            .addComponent(jLabel8))
-                        .addGap(26, 26, 26)
                         .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldMail, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9))
+                            .addGroup(panelNewCallLayout.createSequentialGroup()
+                                .addComponent(jLabel8)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jTextFieldPhone))
                         .addGap(18, 18, 18)
                         .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addComponent(jTextFieldMail, javax.swing.GroupLayout.PREFERRED_SIZE, 345, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(33, 33, 33)
+                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
                             .addGroup(panelNewCallLayout.createSequentialGroup()
                                 .addComponent(jrbStatusNewCase)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jrbStatusContinue)
                                 .addGap(18, 18, 18)
-                                .addComponent(jrbStatusQuickReaction))
-                            .addComponent(jLabel10))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(jrbStatusQuickReaction))))
                     .addGroup(panelNewCallLayout.createSequentialGroup()
                         .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel6)
-                            .addComponent(jTextFieldCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 509, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(jTextFieldCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
                         .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7)
-                            .addComponent(jTextFieldCompany))))
-                .addGap(26, 26, 26))
+                            .addComponent(jTextFieldCompany)))
+                    .addGroup(panelNewCallLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel16)
+                        .addGap(572, 572, 572)
+                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17)
+                            .addGroup(panelNewCallLayout.createSequentialGroup()
+                                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(bMailAddress4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bMailAddress19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bMailAddress20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bMailAddress18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bMailAddress2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bMailAddress3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(bMailAddress17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(panelNewCallLayout.createSequentialGroup()
+                                        .addComponent(bMailAddress1, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(18, 18, 18)
+                                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(bMailAddress7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(bMailAddress8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(bMailAddress9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(bMailAddress10, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(bMailAddress24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(bMailAddress23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(bMailAddress22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(bMailAddress21, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelNewCallLayout.createSequentialGroup()
+                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelNewCallLayout.createSequentialGroup()
+                                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addGroup(panelNewCallLayout.createSequentialGroup()
+                                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                                .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(panelNewCallLayout.createSequentialGroup()
+                                                    .addGap(18, 18, 18)
+                                                    .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(panelNewCallLayout.createSequentialGroup()
+                                                            .addComponent(bProducts9, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts10)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts11)
+                                                            .addGap(3, 3, 3)
+                                                            .addComponent(bProducts12, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts13, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts14)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts15)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts16)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts17)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts18))
+                                                        .addGroup(panelNewCallLayout.createSequentialGroup()
+                                                            .addComponent(bProducts19)
+                                                            .addGap(1, 1, 1)
+                                                            .addComponent(bProducts20)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts21)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts22)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts23, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts24)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts25)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts26)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts27, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                        .addGroup(panelNewCallLayout.createSequentialGroup()
+                                                            .addGap(67, 67, 67)
+                                                            .addComponent(bProducts2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts3, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts5, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts6, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                            .addComponent(bProducts7, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                            .addComponent(bProducts8))))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelNewCallLayout.createSequentialGroup()
+                                                    .addGap(18, 18, 18)
+                                                    .addComponent(bProducts28, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(bProducts29)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(bProducts30)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(bProducts31)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                    .addComponent(bProducts32, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                            .addGroup(panelNewCallLayout.createSequentialGroup()
+                                                .addGap(15, 15, 15)
+                                                .addComponent(bProducts1)))))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(18, 18, 18)
+                        .addComponent(bSEND, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(25, 25, 25))
         );
         panelNewCallLayout.setVerticalGroup(
             panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -847,53 +880,34 @@ public class JFrameMain extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextFieldCompany)
+                    .addComponent(jTextFieldCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldCustomer)
                     .addGroup(panelNewCallLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jTextFieldCompany, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextFieldMail, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(jTextFieldPhone, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                    .addComponent(jrbStatusQuickReaction)
-                    .addComponent(jrbStatusContinue)
-                    .addComponent(jrbStatusNewCase))
+                        .addComponent(jLabel10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jrbStatusQuickReaction)
+                            .addComponent(jrbStatusContinue)
+                            .addComponent(jrbStatusNewCase)))
+                    .addGroup(panelNewCallLayout.createSequentialGroup()
+                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jTextFieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextFieldMail, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                 .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel17)
                     .addComponent(jLabel11))
                 .addGap(18, 18, 18)
-                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelNewCallLayout.createSequentialGroup()
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bMailAddress1)
-                            .addComponent(bMailAddress7))
-                        .addGap(6, 6, 6)
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bMailAddress2)
-                            .addComponent(bMailAddress8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bMailAddress3)
-                            .addComponent(bMailAddress9))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bMailAddress4)
-                            .addComponent(bMailAddress10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bMailAddress5)
-                            .addComponent(bMailAddress11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bMailAddress6))
+                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(panelNewCallLayout.createSequentialGroup()
                         .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel12)
@@ -937,18 +951,48 @@ public class JFrameMain extends javax.swing.JFrame {
                             .addComponent(bProducts28, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bProducts30, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(bProducts31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bProducts32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(bMailAddress12)
+                            .addComponent(bProducts32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel16)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelNewCallLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(jLabel16)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(bSEND, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(220, 220, 220))
+                        .addGroup(panelNewCallLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelNewCallLayout.createSequentialGroup()
+                                .addComponent(bMailAddress1)
+                                .addGap(6, 6, 6)
+                                .addComponent(bMailAddress2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress17)
+                                .addGap(6, 6, 6)
+                                .addComponent(bMailAddress18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress19)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress20))
+                            .addGroup(panelNewCallLayout.createSequentialGroup()
+                                .addComponent(bMailAddress7)
+                                .addGap(6, 6, 6)
+                                .addComponent(bMailAddress8)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress24)
+                                .addGap(6, 6, 6)
+                                .addComponent(bMailAddress23)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress22)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bMailAddress21)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bSEND, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18))
         );
 
         jTabbedPaneMain.addTab("Odebrany telefon", panelNewCall);
@@ -1046,37 +1090,14 @@ public class JFrameMain extends javax.swing.JFrame {
         panelWorkMode.setLayout(panelWorkModeLayout);
         panelWorkModeLayout.setHorizontalGroup(
             panelWorkModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1064, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         panelWorkModeLayout.setVerticalGroup(
             panelWorkModeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 573, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Tryby pracy", panelWorkMode);
-
-        javax.swing.table.DefaultTableModel model =
-        new javax.swing.table.DefaultTableModel(
-
-            new String [] {
-                "ID", "Nazwa", "Email"
-            }, 0
-
-        );
-        jTable3.setModel(model);
-
-        for (TeamMember m : dbc.selectTeamMember()) {
-
-            model.addRow(
-                new Object[]{
-
-                    m.getId(), m.getName(), m.getEmail()
-
-                }
-
-            );
-        }
-        jScrollPane4.setViewportView(jTable3);
 
         jButton1.setText("ZAPISZ ZMIANY");
 
@@ -1093,6 +1114,12 @@ public class JFrameMain extends javax.swing.JFrame {
         textNewTeamMemberName.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textNewTeamMemberNameActionPerformed(evt);
+            }
+        });
+
+        textNewTeamMemberEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textNewTeamMemberEmailActionPerformed(evt);
             }
         });
 
@@ -1133,60 +1160,112 @@ public class JFrameMain extends javax.swing.JFrame {
         jButton7.setText("ZAPISZ KOLEJNOŚĆ");
 
         jButton8.setText("ODŚWIEŻ LISTĘ");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.table.DefaultTableModel model =
+        new javax.swing.table.DefaultTableModel(
+
+            new String[] {"Imię i nazwisko / Nazwa", "Email"
+            }, 0
+        );
+        jTable3.setModel(model);
+
+        try{
+            for(TeamMember m : dbc.selectTeamMember()){
+                model.addRow(
+                    new Object[]{
+                        m.getName(), m.getEmail()
+                    }
+
+                );
+            }
+        } catch(SQLException ex)
+        {ex.printStackTrace();}
+        jScrollPane4.setViewportView(jTable3);
+
+        jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jButton9.setText("ODŚWIEŻ KOLEJNOŚĆ");
+
+        newMemberStatusInfo.setText(" ");
 
         javax.swing.GroupLayout panelMyTeamLayout = new javax.swing.GroupLayout(panelMyTeam);
         panelMyTeam.setLayout(panelMyTeamLayout);
         panelMyTeamLayout.setHorizontalGroup(
             panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMyTeamLayout.createSequentialGroup()
-                .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(panelMyTeamLayout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelMyTeamLayout.createSequentialGroup()
-                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(panelMyTeamLayout.createSequentialGroup()
-                                .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(textNewTeamMemberEmail)))))
-                    .addGroup(panelMyTeamLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(panelMyTeamLayout.createSequentialGroup()
-                                .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btNewTeamMemberCREATE, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(panelMyTeamLayout.createSequentialGroup()
-                                .addComponent(textNewTeamMemberName, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(250, 250, 250))
-                            .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING))))
-                .addGap(53, 53, 53)
+            .addGroup(panelMyTeamLayout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel35)
                     .addGroup(panelMyTeamLayout.createSequentialGroup()
                         .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(28, 28, 28)
+                            .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                        .addComponent(newMemberStatusInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btNewTeamMemberCREATE, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jLabel32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelMyTeamLayout.createSequentialGroup()
+                                                    .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                        .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                                                        .addComponent(textNewTeamMemberEmail))
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 453, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addGap(53, 53, 53))
+                            .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 496, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(153, 153, 153))
+                            .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jComboBox2, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBox4, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBox14, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBox13, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBox15, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBox16, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBox24, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(28, 28, 28)
+                                .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel35)
+                            .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(28, 28, 28)
+                                .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(147, 147, 147))
+                    .addGroup(panelMyTeamLayout.createSequentialGroup()
+                        .addGap(219, 219, 219)
+                        .addComponent(textNewTeamMemberName, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         panelMyTeamLayout.setVerticalGroup(
             panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1195,55 +1274,70 @@ public class JFrameMain extends javax.swing.JFrame {
                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel35))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(17, 17, 17)
                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33)
-                    .addComponent(jLabel34))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabel34)
+                    .addComponent(jLabel33))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelMyTeamLayout.createSequentialGroup()
-                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(textNewTeamMemberName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(textNewTeamMemberEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(8, 8, 8)
+                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btNewTeamMemberCREATE, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
+                            .addComponent(newMemberStatusInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(panelMyTeamLayout.createSequentialGroup()
-                        .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelMyTeamLayout.createSequentialGroup()
+                                .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(10, 10, 10)
+                                .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBox24, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(61, 61, 61)
-                        .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panelMyTeamLayout.createSequentialGroup()
-                            .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(textNewTeamMemberName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(textNewTeamMemberEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(btNewTeamMemberCREATE, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(2, 2, 2)
-                            .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(23, Short.MAX_VALUE))
+                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                        .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25))))
         );
 
         jTabbedPane1.addTab("Mój zespół", panelMyTeam);
@@ -1265,11 +1359,11 @@ public class JFrameMain extends javax.swing.JFrame {
         panelDataBase.setLayout(panelDataBaseLayout);
         panelDataBaseLayout.setHorizontalGroup(
             panelDataBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1064, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         panelDataBaseLayout.setVerticalGroup(
             panelDataBaseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 573, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Baza danych", panelDataBase);
@@ -1278,11 +1372,11 @@ public class JFrameMain extends javax.swing.JFrame {
         panelLicense.setLayout(panelLicenseLayout);
         panelLicenseLayout.setHorizontalGroup(
             panelLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1064, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         panelLicenseLayout.setVerticalGroup(
             panelLicenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 573, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Licencja", panelLicense);
@@ -1333,6 +1427,64 @@ public class JFrameMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonNewConversationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewConversationActionPerformed
+        // TODO add your handling code here:
+
+        jTabbedPaneMain.setSelectedComponent(panelNewCall);
+        panelCallStats.setVisible(true);
+
+
+    }//GEN-LAST:event_jButtonNewConversationActionPerformed
+
+    private void textNewTeamMemberNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNewTeamMemberNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textNewTeamMemberNameActionPerformed
+
+    private void btNewTeamMemberCREATEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNewTeamMemberCREATEActionPerformed
+        // TODO add your handling code here:
+
+        String newTeamMemberName = textNewTeamMemberName.getText();
+        String newTeamMemberEmail = textNewTeamMemberEmail.getText();
+
+        if (newTeamMemberName.isEmpty()
+                | newTeamMemberEmail.isEmpty()) {
+
+            newMemberStatusInfo.setText("Uzupełnij wszystkie pola!");
+            newMemberStatusInfo.setForeground(Color.red);
+            btNewTeamMemberCREATE.setBackground(Color.red);
+
+        } else {
+
+            dbc.insertTeamMember(newTeamMemberName, newTeamMemberEmail);
+            btNewTeamMemberCREATE.setBackground(Color.GREEN);
+            newMemberStatusInfo.setText("Dodano nowy adres!");
+            newMemberStatusInfo.setForeground(Color.GREEN);
+
+//            labGoscNowyStatusInfo.setForeground(new java.awt.Color(0, 200, 0));
+        }
+
+    }//GEN-LAST:event_btNewTeamMemberCREATEActionPerformed
+
+    private void bProducts5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bProducts5ActionPerformed
+
+    private void bProducts18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts18ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bProducts18ActionPerformed
+
+    private void bProducts17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bProducts17ActionPerformed
+
+    private void bProducts16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bProducts16ActionPerformed
+
+    private void bProducts15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bProducts15ActionPerformed
+
     private void bProducts4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bProducts4ActionPerformed
@@ -1341,9 +1493,115 @@ public class JFrameMain extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bProducts19ActionPerformed
 
-    private void bMailAddress12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMailAddress12ActionPerformed
+    private void bSENDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSENDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_bMailAddress12ActionPerformed
+
+        //Important lists:
+        List<TeamMember> allMyTeam = new ArrayList<>();
+        List<TeamMember> sendToMyTeamMembers = new ArrayList<>();
+        List<JToggleButton> allProducts = new ArrayList<>();
+        List<JToggleButton> chosenProducts = new ArrayList<>();
+        List<String> chosenProductsString = new ArrayList<>();
+
+        //Variables:
+        String toTeamMember = "info@jmdev.cba.pl";
+        String prefix = "Dzwonił ";
+        String products;
+
+        //Customer's personal data:
+        String customer = jTextFieldCustomer.getText();
+        String company = jTextFieldCompany.getText();
+        String phone = jTextFieldPhone.getText();
+        String email = jTextFieldMail.getText();
+        String details = jTestAreaDetails.getText();
+
+        // Putting all buttons of products to the list of buttons:
+        allProducts.add(bProducts1);
+        allProducts.add(bProducts2);
+        allProducts.add(bProducts3);
+        allProducts.add(bProducts4);
+        allProducts.add(bProducts5);
+        allProducts.add(bProducts6);
+        allProducts.add(bProducts7);
+        allProducts.add(bProducts8);
+        allProducts.add(bProducts9);
+        allProducts.add(bProducts10);
+        allProducts.add(bProducts11);
+        allProducts.add(bProducts12);
+        allProducts.add(bProducts13);
+        allProducts.add(bProducts14);
+        allProducts.add(bProducts15);
+        allProducts.add(bProducts16);
+        allProducts.add(bProducts17);
+        allProducts.add(bProducts18);
+        allProducts.add(bProducts19);
+        allProducts.add(bProducts20);
+        allProducts.add(bProducts21);
+        allProducts.add(bProducts22);
+        allProducts.add(bProducts23);
+        allProducts.add(bProducts24);
+        allProducts.add(bProducts25);
+        allProducts.add(bProducts26);
+        allProducts.add(bProducts27);
+        allProducts.add(bProducts28);
+        allProducts.add(bProducts29);
+        allProducts.add(bProducts30);
+        allProducts.add(bProducts31);
+        allProducts.add(bProducts32);
+
+        // Getting info about chosen products:
+        allProducts.stream()
+                .forEach(c -> {
+                    if (c.isSelected() == true) {
+                        chosenProducts.add(c);
+                    }
+                }
+                );
+
+        chosenProducts.stream()
+                .forEach(c -> {
+                    chosenProductsString.add(c.getText());
+                }
+                );
+
+        // Geting list of chosen products as String:
+        products = chosenProductsString.toString();
+
+        //Test println - show me my chosen products as String
+        System.out.println(chosenProductsString);
+
+        //Composing email message:
+        MyNewMessage myNewMessage = new MyNewMessage();
+        SendMail newMailToSend = new SendMail();
+
+        myNewMessage.setToTeamMember(toTeamMember);
+        myNewMessage.setPrefix(prefix);
+        myNewMessage.setProducts(products);
+        myNewMessage.setCustomer(customer);
+        myNewMessage.setCompany(company);
+        myNewMessage.setPhone(phone);
+        myNewMessage.setEmail(email);
+        myNewMessage.setDetails(details);
+
+        //        newMailToSend.sendMailTLS(myNewMessage);
+        jTabbedPaneMain.setSelectedComponent(panelWaitingMode);
+
+        // Unchecking buttons:
+        chosenProducts.removeAll(chosenProducts);
+        for (JToggleButton b : chosenProducts) {
+            b.setSelected(false);
+        }
+
+        for (JToggleButton b : allProducts) {
+            b.setSelected(false);
+        }
+
+        panelCallStats.setVisible(false);
+    }//GEN-LAST:event_bSENDActionPerformed
+
+    private void bMailAddress1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMailAddress1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bMailAddress1ActionPerformed
 
     private void bProducts32ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts32ActionPerformed
         // TODO add your handling code here:
@@ -1445,175 +1703,45 @@ public class JFrameMain extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bProducts1ActionPerformed
 
-    private void bProducts15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bProducts15ActionPerformed
-
-    private void bProducts16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts16ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bProducts16ActionPerformed
-
-    private void bProducts17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts17ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bProducts17ActionPerformed
-
-    private void bProducts18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bProducts18ActionPerformed
-
-    private void bProducts5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bProducts5ActionPerformed
-        // TODO add your handling code here:
-
-    }//GEN-LAST:event_bProducts5ActionPerformed
-
-    private void bSENDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSENDActionPerformed
-        // TODO add your handling code here:
-
-        //Important lists:
-        List<TeamMember> allMyTeam = new ArrayList<>();
-        List<TeamMember> sendToMyTeamMembers = new ArrayList<>();
-        List<JToggleButton> allProducts = new ArrayList<>();
-        List<JToggleButton> chosenProducts = new ArrayList<>();
-        List<String> chosenProductsString = new ArrayList<>();
-
-        //Variables:
-        String toTeamMember = "info@jmdev.cba.pl";
-        String prefix = "Dzwonił ";
-        String products;
-
-        //Customer's personal data:
-        String customer = jTextFieldCustomer.getText();
-        String company = jTextFieldCompany.getText();
-        String phone = jTextFieldPhone.getText();
-        String email = jTextFieldMail.getText();
-        String details = jTestAreaDetails.getText();
-
-        // Putting all buttons of products to the list of buttons:    
-        allProducts.add(bProducts1);
-        allProducts.add(bProducts2);
-        allProducts.add(bProducts3);
-        allProducts.add(bProducts4);
-        allProducts.add(bProducts5);
-        allProducts.add(bProducts6);
-        allProducts.add(bProducts7);
-        allProducts.add(bProducts8);
-        allProducts.add(bProducts9);
-        allProducts.add(bProducts10);
-        allProducts.add(bProducts11);
-        allProducts.add(bProducts12);
-        allProducts.add(bProducts13);
-        allProducts.add(bProducts14);
-        allProducts.add(bProducts15);
-        allProducts.add(bProducts16);
-        allProducts.add(bProducts17);
-        allProducts.add(bProducts18);
-        allProducts.add(bProducts19);
-        allProducts.add(bProducts20);
-        allProducts.add(bProducts21);
-        allProducts.add(bProducts22);
-        allProducts.add(bProducts23);
-        allProducts.add(bProducts24);
-        allProducts.add(bProducts25);
-        allProducts.add(bProducts26);
-        allProducts.add(bProducts27);
-        allProducts.add(bProducts28);
-        allProducts.add(bProducts29);
-        allProducts.add(bProducts30);
-        allProducts.add(bProducts31);
-        allProducts.add(bProducts32);
-
-        // Getting info about chosen products:
-        allProducts.stream()
-                .forEach(c -> {
-                    if (c.isSelected() == true) {
-                        chosenProducts.add(c);
-                    }
-                }
-                );
-
-        chosenProducts.stream()
-                .forEach(c -> {
-                    chosenProductsString.add(c.getText());
-                }
-                );
-
-        // Geting list of chosen products as String:
-        products = chosenProductsString.toString();
-
-        //Test println - show me my chosen products as String
-        System.out.println(chosenProductsString);
-
-        //Composing email message:
-        MyNewMessage myNewMessage = new MyNewMessage();
-        SendMail newMailToSend = new SendMail();
-
-        myNewMessage.setToTeamMember(toTeamMember);
-        myNewMessage.setPrefix(prefix);
-        myNewMessage.setProducts(products);
-        myNewMessage.setCustomer(customer);
-        myNewMessage.setCompany(company);
-        myNewMessage.setPhone(phone);
-        myNewMessage.setEmail(email);
-        myNewMessage.setDetails(details);
-
-//        newMailToSend.sendMailTLS(myNewMessage);
-        jTabbedPaneMain.setSelectedComponent(panelWaitingMode);
-
-        // Unchecking buttons:
-        chosenProducts.removeAll(chosenProducts);
-        for (JToggleButton b : chosenProducts) {
-            b.setSelected(false);
-        }
-
-        for (JToggleButton b : allProducts) {
-            b.setSelected(false);
-        }
-
-        panelCallStats.setVisible(false);
-
-
-    }//GEN-LAST:event_bSENDActionPerformed
-
-    private void bMailAddress1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMailAddress1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bMailAddress1ActionPerformed
-
     private void jTextFieldCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCustomerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextFieldCustomerActionPerformed
 
-    private void jButtonNewConversationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewConversationActionPerformed
+    private void bMailAddress17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bMailAddress17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bMailAddress17ActionPerformed
+
+    private void textNewTeamMemberEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNewTeamMemberEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textNewTeamMemberEmailActionPerformed
+
+    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
 
-        jTabbedPaneMain.setSelectedComponent(panelNewCall);
-        panelCallStats.setVisible(true);
+        jTable3 = new javax.swing.JTable();
+        javax.swing.table.DefaultTableModel model
+                = new javax.swing.table.DefaultTableModel(
+                        new String[]{"Imię i nazwisko / Nazwa", "Email"
+                        }, 0
+                );
+        jTable3.setModel(model);
 
-
-    }//GEN-LAST:event_jButtonNewConversationActionPerformed
-
-    private void textNewTeamMemberNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNewTeamMemberNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_textNewTeamMemberNameActionPerformed
-
-    private void btNewTeamMemberCREATEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNewTeamMemberCREATEActionPerformed
-        // TODO add your handling code here:
-
-        String newTeamMemberName = textNewTeamMemberName.getText();
-        String newTeamMemberEmail = textNewTeamMemberEmail.getText();
-
-        DBConnection dbcNew = new DBConnection();
-
-        if (newTeamMemberName.isEmpty()
-                | newTeamMemberEmail.isEmpty()) {
-
-        } else {
-
-            dbcNew.insertMyTeam(newTeamMemberName, newTeamMemberEmail);
-
-//            labGoscNowyStatusInfo.setForeground(new java.awt.Color(0, 200, 0));
+        try {
+            for (TeamMember m : dbc.selectTeamMember()) {
+                model.addRow(
+                        new Object[]{
+                            m.getName(), m.getEmail()
+                        }
+                );
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
         }
 
-    }//GEN-LAST:event_btNewTeamMemberCREATEActionPerformed
+        jScrollPane4.setViewportView(jTable3);
+
+
+    }//GEN-LAST:event_jButton8ActionPerformed
 
     public JButton getjButtonNewConversation() {
         return jButtonNewConversation;
@@ -1656,6 +1784,8 @@ public class JFrameMain extends javax.swing.JFrame {
 
     }
 
+    DBConnection dbc = new DBConnection();
+
     //////////////// Data i czas
     Date startDate = new Date();
 //    SimpleDateFormat startDateFormat = new SimpleDateFormat("yyyy.MM.dd, EEE, HH:mm:ss");
@@ -1670,13 +1800,17 @@ public class JFrameMain extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton bMailAddress1;
     private javax.swing.JToggleButton bMailAddress10;
-    private javax.swing.JToggleButton bMailAddress11;
-    private javax.swing.JToggleButton bMailAddress12;
+    private javax.swing.JToggleButton bMailAddress17;
+    private javax.swing.JToggleButton bMailAddress18;
+    private javax.swing.JToggleButton bMailAddress19;
     private javax.swing.JToggleButton bMailAddress2;
+    private javax.swing.JToggleButton bMailAddress20;
+    private javax.swing.JToggleButton bMailAddress21;
+    private javax.swing.JToggleButton bMailAddress22;
+    private javax.swing.JToggleButton bMailAddress23;
+    private javax.swing.JToggleButton bMailAddress24;
     private javax.swing.JToggleButton bMailAddress3;
     private javax.swing.JToggleButton bMailAddress4;
-    private javax.swing.JToggleButton bMailAddress5;
-    private javax.swing.JToggleButton bMailAddress6;
     private javax.swing.JToggleButton bMailAddress7;
     private javax.swing.JToggleButton bMailAddress8;
     private javax.swing.JToggleButton bMailAddress9;
@@ -1720,6 +1854,7 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonNewConversation;
     private javax.swing.JComboBox<String> jComboBox13;
     private javax.swing.JComboBox<String> jComboBox14;
@@ -1732,6 +1867,10 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> jComboBox20;
     private javax.swing.JComboBox<String> jComboBox21;
     private javax.swing.JComboBox<String> jComboBox22;
+    private javax.swing.JComboBox<String> jComboBox23;
+    private javax.swing.JComboBox<String> jComboBox24;
+    private javax.swing.JComboBox<String> jComboBox25;
+    private javax.swing.JComboBox<String> jComboBox26;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -1773,8 +1912,8 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPaneMain;
     private javax.swing.JTable jTable1;
@@ -1788,6 +1927,7 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JRadioButton jrbStatusContinue;
     private javax.swing.JRadioButton jrbStatusNewCase;
     private javax.swing.JRadioButton jrbStatusQuickReaction;
+    private javax.swing.JLabel newMemberStatusInfo;
     private javax.swing.JPanel panelCallStats;
     private javax.swing.JPanel panelDataBase;
     private javax.swing.JPanel panelHistoryAll;

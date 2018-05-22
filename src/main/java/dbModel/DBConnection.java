@@ -63,7 +63,7 @@ public class DBConnection {
         return true;
     }
 
-    public boolean insertMyTeam(String name, String email) {
+    public boolean insertTeamMember(String name, String email) {
 
         try {
             PreparedStatement prepStmt = conn.prepareStatement("insert into myTeam values(NULL, ?, ?);");
@@ -98,8 +98,8 @@ public class DBConnection {
 
          String sql = "UPDATE myTeam "
                 + "SET "    
-                + "name = ?,"
-                + "email = ?"
+                + "name = ?, "
+                + "email = ? "
                 + "WHERE id = ?";
          
         try (Connection conn = this.connect();
@@ -151,7 +151,7 @@ public class DBConnection {
         try {
             conn.close();
         } catch (SQLException ex) {
-            System.err.println("Database cclosing connection error");
+            System.err.println("Database closing connection error");
             ex.printStackTrace();
         }
     
