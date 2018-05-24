@@ -16,12 +16,15 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import jdk.nashorn.internal.objects.NativeArray;
+import main.JFrameMain;
 
 /**
  *
  * @author HP
  */
-public class DBConnection {
+public class DBConnection extends JFrameMain {
 
     public static final String DRIVER = "org.sqlite.JDBC";
     public static final String DB_URL = "jdbc:sqlite:src\\main\\java\\dbdatabase.db";
@@ -48,6 +51,7 @@ public class DBConnection {
 
         createTables();
 
+        settingsUpdateComboBoxes();
     }
 
     public boolean createTables() {
@@ -140,29 +144,34 @@ public class DBConnection {
         return team;
     }
 
-    public DefaultComboBoxModel comboBoxSelect() {
+    private void settingsUpdateComboBoxes() {
 
-        DefaultComboBoxModel comboSelect = new DefaultComboBoxModel();
-        String sql = "SELECT name FROM myTeam";
+        String sql = "SELECT * FROM myTeam";
 
         try {
-            conn = DriverManager.getConnection(DB_URL);
-            stat = conn.createStatement();
-            ResultSet result = stat.executeQuery(sql);
+            PreparedStatement prepStmt = conn.prepareStatement(sql);
+            ResultSet result = prepStmt.executeQuery();
             
             while (result.next()) {
-                String name = result.getString(1);
-                comboSelect.addElement(name);
+                {
+                    for (JComboBox comboBox : settingsTeamComboBoxes) {
+                        comboBox.addItem(result.getString("name"));
+                    }
+
+                    for (String email : myChosenEmails) {
+                        email.valueOf(result.getString("email"));
+                    }
+
+                }
+
             }
-            
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+        } catch (Exception e) {
+            System.out.println("Error during uptading ComboBoxes");
         }
-        return comboSelect;
+
     }
 
-    
-    
     public void closeConnection() {
         try {
             conn.close();

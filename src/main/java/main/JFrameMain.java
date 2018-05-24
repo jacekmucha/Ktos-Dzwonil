@@ -31,6 +31,8 @@ import java.awt.Color;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 
 /**
@@ -44,10 +46,76 @@ public class JFrameMain extends javax.swing.JFrame {
      */
     public JFrameMain() {
         initComponents();
-
+        myComboBoxes();
+        myChosenEmails();
+        
         panelCallStats.setVisible(false);
     }
 
+    protected List<JComboBox> settingsTeamComboBoxes = new ArrayList<>();
+
+    protected void myComboBoxes() {
+        settingsTeamComboBoxes.add(jComboBoxMember1);
+        settingsTeamComboBoxes.add(jComboBoxMember2);
+        settingsTeamComboBoxes.add(jComboBoxMember3);
+        settingsTeamComboBoxes.add(jComboBoxMember4);
+        settingsTeamComboBoxes.add(jComboBoxMember5);
+        settingsTeamComboBoxes.add(jComboBoxMember6);
+        settingsTeamComboBoxes.add(jComboBoxMember7);
+        settingsTeamComboBoxes.add(jComboBoxMember8);
+        settingsTeamComboBoxes.add(jComboBoxMember9);
+        settingsTeamComboBoxes.add(jComboBoxMember10);
+        settingsTeamComboBoxes.add(jComboBoxMember11);
+        settingsTeamComboBoxes.add(jComboBoxMember12);
+        settingsTeamComboBoxes.add(jComboBoxMember13);
+        settingsTeamComboBoxes.add(jComboBoxMember14);
+        settingsTeamComboBoxes.add(jComboBoxMember15);
+        settingsTeamComboBoxes.add(jComboBoxMember16);
+    }
+
+    String myChosenEMails1;
+    String myChosenEMails2;
+    String myChosenEMails3;
+    String myChosenEMails4;
+    String myChosenEMails5;
+    String myChosenEMails6;
+    String myChosenEMails7;
+    String myChosenEMails8;
+    String myChosenEMails9;
+    String myChosenEMails10;
+    String myChosenEMails11;
+    String myChosenEMails12;
+    String myChosenEMails13;
+    String myChosenEMails14;
+    String myChosenEMails15;
+    String myChosenEMails16;
+
+    protected List<String> myChosenEmails = new ArrayList<>();
+    
+    protected void myChosenEmails(){
+        myChosenEmails.add(myChosenEMails1);
+        myChosenEmails.add(myChosenEMails2);
+        myChosenEmails.add(myChosenEMails3);
+        myChosenEmails.add(myChosenEMails4);
+        myChosenEmails.add(myChosenEMails5);
+        myChosenEmails.add(myChosenEMails6);
+        myChosenEmails.add(myChosenEMails7);
+        myChosenEmails.add(myChosenEMails8);
+        myChosenEmails.add(myChosenEMails9);
+        myChosenEmails.add(myChosenEMails10);
+        myChosenEmails.add(myChosenEMails11);
+        myChosenEmails.add(myChosenEMails12);
+        myChosenEmails.add(myChosenEMails13);
+        myChosenEmails.add(myChosenEMails14);
+        myChosenEmails.add(myChosenEMails15);
+        myChosenEmails.add(myChosenEMails16);
+        
+    }
+    
+
+
+
+    //////////////// Data i czas   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -176,28 +244,28 @@ public class JFrameMain extends javax.swing.JFrame {
         btNewTeamMemberCREATE = new javax.swing.JButton();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel35 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jComboBox13 = new javax.swing.JComboBox<>();
-        jComboBox14 = new javax.swing.JComboBox<>();
-        jComboBox15 = new javax.swing.JComboBox<>();
-        jComboBox16 = new javax.swing.JComboBox<>();
-        jComboBox17 = new javax.swing.JComboBox<>();
-        jComboBox18 = new javax.swing.JComboBox<>();
-        jComboBox19 = new javax.swing.JComboBox<>();
-        jComboBox20 = new javax.swing.JComboBox<>();
-        jComboBox21 = new javax.swing.JComboBox<>();
-        jComboBox22 = new javax.swing.JComboBox<>();
+        jComboBoxMember2 = new javax.swing.JComboBox<>();
+        jComboBoxMember3 = new javax.swing.JComboBox<>();
+        jComboBoxMember4 = new javax.swing.JComboBox<>();
+        jComboBoxMember6 = new javax.swing.JComboBox<>();
+        jComboBoxMember5 = new javax.swing.JComboBox<>();
+        jComboBoxMember15 = new javax.swing.JComboBox<>();
+        jComboBoxMember13 = new javax.swing.JComboBox<>();
+        jComboBoxMember12 = new javax.swing.JComboBox<>();
+        jComboBoxMember11 = new javax.swing.JComboBox<>();
+        jComboBoxMember10 = new javax.swing.JComboBox<>();
+        jComboBoxMember9 = new javax.swing.JComboBox<>();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         jScrollPane4 = new javax.swing.JScrollPane();
         tabTeamMembers = new javax.swing.JTable();
-        jComboBox23 = new javax.swing.JComboBox<>();
-        jComboBox24 = new javax.swing.JComboBox<>();
-        jComboBox25 = new javax.swing.JComboBox<>();
-        jComboBox26 = new javax.swing.JComboBox<>();
+        jComboBoxMember14 = new javax.swing.JComboBox<>();
+        jComboBoxMember7 = new javax.swing.JComboBox<>();
+        jComboBoxMember8 = new javax.swing.JComboBox<>();
+        jComboBoxMember16 = new javax.swing.JComboBox<>();
         jButton9 = new javax.swing.JButton();
         newMemberStatusInfo = new javax.swing.JLabel();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        jComboBoxMember1 = new javax.swing.JComboBox<>();
         panelProducts = new javax.swing.JPanel();
         panelDataBase = new javax.swing.JPanel();
         panelLicense = new javax.swing.JPanel();
@@ -1141,27 +1209,27 @@ public class JFrameMain extends javax.swing.JFrame {
         jLabel35.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel35.setText("Kolejność wyświetlania:");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox17.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember15.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox18.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember13.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox19.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember12.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox20.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox21.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox22.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton7.setText("ZAPISZ KOLEJNOŚĆ");
 
@@ -1194,19 +1262,19 @@ public class JFrameMain extends javax.swing.JFrame {
         tabTeamMembers.setPreferredSize(new java.awt.Dimension(450, 240));
         jScrollPane4.setViewportView(tabTeamMembers);
 
-        jComboBox23.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember14.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox24.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox25.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jComboBox26.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember16.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jButton9.setText("ODŚWIEŻ KOLEJNOŚĆ");
 
         newMemberStatusInfo.setText(" ");
 
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxMember1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         javax.swing.GroupLayout panelMyTeamLayout = new javax.swing.GroupLayout(panelMyTeam);
         panelMyTeam.setLayout(panelMyTeamLayout);
@@ -1247,29 +1315,29 @@ public class JFrameMain extends javax.swing.JFrame {
                         .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelMyTeamLayout.createSequentialGroup()
                                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jComboBox2, 0, 234, Short.MAX_VALUE)
-                                    .addComponent(jComboBox14, 0, 234, Short.MAX_VALUE)
-                                    .addComponent(jComboBox13, 0, 234, Short.MAX_VALUE)
-                                    .addComponent(jComboBox15, 0, 234, Short.MAX_VALUE)
-                                    .addComponent(jComboBox16, 0, 234, Short.MAX_VALUE)
-                                    .addComponent(jComboBox24, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxMember2, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxMember4, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxMember3, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxMember6, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxMember5, 0, 234, Short.MAX_VALUE)
+                                    .addComponent(jComboBoxMember7, 0, 234, Short.MAX_VALUE)
                                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox4, 0, 234, Short.MAX_VALUE))
+                                    .addComponent(jComboBoxMember1, 0, 234, Short.MAX_VALUE))
                                 .addGap(28, 28, 28)
                                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember10, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember9, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember12, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember11, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember15, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember13, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jComboBoxMember14, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel35)
                             .addGroup(panelMyTeamLayout.createSequentialGroup()
-                                .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember8, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
-                                .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jComboBoxMember16, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(147, 147, 147))
                     .addGroup(panelMyTeamLayout.createSequentialGroup()
                         .addGap(219, 219, 219)
@@ -1311,37 +1379,38 @@ public class JFrameMain extends javax.swing.JFrame {
                     .addGroup(panelMyTeamLayout.createSequentialGroup()
                         .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelMyTeamLayout.createSequentialGroup()
-                                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(51, 51, 51)
+                                .addComponent(jComboBoxMember2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember3, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox13, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember4, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox14, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember5, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox16, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox15, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jComboBoxMember6, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelMyTeamLayout.createSequentialGroup()
-                                .addComponent(jComboBox22, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jComboBoxMember9, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox21, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember10, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox20, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember11, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox19, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember12, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox18, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember13, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(10, 10, 10)
-                                .addComponent(jComboBox23, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jComboBoxMember14, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox17, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox24, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jComboBoxMember15, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jComboBoxMember7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jComboBox26, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox25, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jComboBoxMember16, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBoxMember8, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                         .addGroup(panelMyTeamLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1435,6 +1504,7 @@ public class JFrameMain extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
 
     private void jButtonNewConversationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNewConversationActionPerformed
         // TODO add your handling code here:
@@ -1752,6 +1822,18 @@ public class JFrameMain extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton8ActionPerformed
 
+        DBConnection dbc = new DBConnection();
+
+    //////////////// Data i czas
+    Date startDate = new Date();
+//    SimpleDateFormat startDateFormat = new SimpleDateFormat("yyyy.MM.dd, EEE, HH:mm:ss");
+//    String startDateString = startDateFormat.format(startDate);
+
+    Date finishDate = new Date();
+//    SimpleDateFormat finishDateFormat = new SimpleDateFormat("yyyy.MM.dd, EEE, HH:mm:ss");
+//    String finishDateString = finishDateFormat.format(finishDate);
+    
+    
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
 
@@ -1830,20 +1912,6 @@ public class JFrameMain extends javax.swing.JFrame {
     }
 
 
-    
-    DBConnection dbc = new DBConnection();
-
-    //////////////// Data i czas
-    Date startDate = new Date();
-//    SimpleDateFormat startDateFormat = new SimpleDateFormat("yyyy.MM.dd, EEE, HH:mm:ss");
-//    String startDateString = startDateFormat.format(startDate);
-
-    Date finishDate = new Date();
-//    SimpleDateFormat finishDateFormat = new SimpleDateFormat("yyyy.MM.dd, EEE, HH:mm:ss");
-//    String finishDateString = finishDateFormat.format(finishDate);
-
-    //////////////// Data i czas   
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JToggleButton bMailAddress1;
     private javax.swing.JToggleButton bMailAddress10;
@@ -1903,22 +1971,22 @@ public class JFrameMain extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JButton jButtonNewConversation;
-    private javax.swing.JComboBox<String> jComboBox13;
-    private javax.swing.JComboBox<String> jComboBox14;
-    private javax.swing.JComboBox<String> jComboBox15;
-    private javax.swing.JComboBox<String> jComboBox16;
-    private javax.swing.JComboBox<String> jComboBox17;
-    private javax.swing.JComboBox<String> jComboBox18;
-    private javax.swing.JComboBox<String> jComboBox19;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox20;
-    private javax.swing.JComboBox<String> jComboBox21;
-    private javax.swing.JComboBox<String> jComboBox22;
-    private javax.swing.JComboBox<String> jComboBox23;
-    private javax.swing.JComboBox<String> jComboBox24;
-    private javax.swing.JComboBox<String> jComboBox25;
-    private javax.swing.JComboBox<String> jComboBox26;
-    private javax.swing.JComboBox<String> jComboBox4;
+    private javax.swing.JComboBox<String> jComboBoxMember1;
+    private javax.swing.JComboBox<String> jComboBoxMember10;
+    private javax.swing.JComboBox<String> jComboBoxMember11;
+    private javax.swing.JComboBox<String> jComboBoxMember12;
+    private javax.swing.JComboBox<String> jComboBoxMember13;
+    private javax.swing.JComboBox<String> jComboBoxMember14;
+    private javax.swing.JComboBox<String> jComboBoxMember15;
+    private javax.swing.JComboBox<String> jComboBoxMember16;
+    private javax.swing.JComboBox<String> jComboBoxMember2;
+    private javax.swing.JComboBox<String> jComboBoxMember3;
+    private javax.swing.JComboBox<String> jComboBoxMember4;
+    private javax.swing.JComboBox<String> jComboBoxMember5;
+    private javax.swing.JComboBox<String> jComboBoxMember6;
+    private javax.swing.JComboBox<String> jComboBoxMember7;
+    private javax.swing.JComboBox<String> jComboBoxMember8;
+    private javax.swing.JComboBox<String> jComboBoxMember9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

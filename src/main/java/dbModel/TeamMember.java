@@ -24,8 +24,8 @@ public class TeamMember {
         this.id = id;
     }
 
-    public TeamMember(String name) {
-        this.name = name;
+    public TeamMember(String email) {
+        this.email = email;
     }
     
     
