@@ -27,7 +27,7 @@ import main.JFrameMain;
 public class DBConnection extends JFrameMain {
 
     public static final String DRIVER = "org.sqlite.JDBC";
-    public static final String DB_URL = "jdbc:sqlite:src\\main\\java\\dbdatabase.db";
+    public static final String DB_URL = "jdbc:sqlite:src\\main\\java\\db\\database.db";
 
     private Connection conn;
     private Statement stat;
